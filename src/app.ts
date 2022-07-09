@@ -87,7 +87,7 @@ app.get("/welcome", (req: Request, res: Response, next: NextFunction) => {
   res.send("welcome!");
 });
 
-app.listen(8082, () => {
+app.listen(prod ? process.env.PORT : 8082, () => {
   console.log(`
   ################################################
   🛡️  Server listening on port: 8082
