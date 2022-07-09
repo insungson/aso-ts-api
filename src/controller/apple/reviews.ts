@@ -1,3 +1,4 @@
+//@ts-ignore
 import apple from "app-store-scraper";
 import { Request, Response, NextFunction } from "express";
 

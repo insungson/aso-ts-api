@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+//@ts-ignore
 import apple from "app-store-scraper";
 
 export const appController = async (
