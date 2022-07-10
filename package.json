@@ -2,11 +2,11 @@
   "name": "aixtsmode",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p .",
     "preinstall": "npm install pm2 -g",
-    "start": "NODE_ENV=production pm2-runtime dist/src/app.js -i 0",
+    "start": "ts-node src/app.ts",
     "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" src/app.ts"
   },
   "author": "MIT",
