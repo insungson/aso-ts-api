@@ -30,7 +30,7 @@ export interface IGoogleMEthods {
   app: (params: IGoogleAppResponse) => IGoogleToCommonApp;
   developer: (params: IGoogleDeveloperResponse[]) => IGoogleToCommonDeveloper[];
   list: (params: IGoogleListResponse[]) => IGoogleToCommonList[];
-  reviews: (params: IGoogleReviewsResponse[]) => IGoogleToCommonList[];
+  reviews: (params: IGoogleReviewsResponse[]) => IGoogleToCommonReviews[];
   search: (params: IGoogleSearchResponse[]) => IGoogleToCommonSearch[];
   similar: (params: IGoogleSimilarResponse[]) => IGoogleToCommonSimilar[];
 }

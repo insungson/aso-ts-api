@@ -97,11 +97,92 @@ export class Google implements IGoogleMEthods {
         free: paramObj.free ?? null,
         score: paramObj.score ?? null,
         // apple / google 의미는 같지만 속성은 다른것..
+        description: paramObj.summary ?? null,
+        // 구글만 가진 속성
+        scoreText: paramObj.scoreText ?? null,
+        // 애플만 가진 속성
+        id: null,
+        genres: null,
+        genreIds: null,
+        primaryGenre: null,
+        primaryGenreId: null,
+        contentRating: null,
+        languages: null,
+        size: null,
+        requiredOsVersion: null,
+        released: null,
+        updated: null,
+        releaseNotes: null,
+        version: null,
+        developerId: null,
+        developerUrl: null,
+        developerWebsite: null,
+        reviews: null,
+        currentVersionScore: null,
+        currentVersionReviews: null,
+        screenshots: null,
+        ipadScreenshots: null,
+        appletvScreenshots: null,
+        supportedDevices: null,
       };
     });
   }
-  list!: (params: IGoogleListResponse[]) => IGoogleToCommonList[];
-  reviews!: (params: IGoogleReviewsResponse[]) => IGoogleToCommonList[];
+  list(params: IGoogleListResponse[]): IGoogleToCommonList[] {
+    return params.map((paramObj) => {
+      return {
+        // 타입
+        provider_type: providerType.google,
+        // google/apple 공통 속성
+        title: paramObj.title ?? null,
+        appId: paramObj.appId ?? null,
+        url: paramObj.url ?? null,
+        icon: paramObj.icon ?? null,
+        developer: paramObj.developer ?? null,
+        currency: paramObj.currency ?? null,
+        price: paramObj.price ?? null,
+        free: paramObj.free ?? null,
+        // apple / google 의미는 같지만 속성은 다른것..
+        description: paramObj.summary ?? null,
+        // 구글만 가진 속성
+        scoreText: paramObj.scoreText ?? null,
+        score: paramObj.score ?? null,
+        // 애플만 가진 속성
+        id: null,
+        developerUrl: null,
+        developerId: null,
+        genre: null,
+        genreId: null,
+        released: null,
+      };
+    });
+  }
+  reviews(params: IGoogleReviewsResponse[]): IGoogleToCommonReviews[] {
+    return params.map((paramObj) => {
+      return {
+        // 타입
+        provider_type: providerType.google,
+        // google/apple 공통 속성
+        id: paramObj.id ?? null,
+        userName: paramObj.userName ?? null,
+        score: paramObj.score ?? null,
+        url: paramObj.url ?? null,
+        title: paramObj.title ?? null,
+        text: paramObj.text ?? null,
+        version: paramObj.version ?? null,
+        // apple / google 의미는 같지만 속성은 다른것..
+        // 구글만 가진 속성
+        thumbsUp: paramObj.thumbsUp ?? null,
+        criterias: paramObj.criterias ?? null,
+        date: paramObj.date ?? null,
+        scoreText: paramObj.scoreText ?? null,
+        replyDate: paramObj.replyDate ?? null,
+        replyText: paramObj.replyText ?? null,
+        userImage: paramObj.userImage ?? null,
+        // 애플만 가진 속성
+        userUrl: null,
+      };
+    });
+  }
   search!: (params: IGoogleSearchResponse[]) => IGoogleToCommonSearch[];
   similar!: (params: IGoogleSimilarResponse[]) => IGoogleToCommonSimilar[];
 }
