@@ -1,6 +1,7 @@
 //@ts-ignore
 import apple from "app-store-scraper";
 import { Request, Response, NextFunction } from "express";
+import { Apple } from "../../model/apple/index";
 
 export const privacyController = async (
   req: Request,
