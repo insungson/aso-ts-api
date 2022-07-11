@@ -81,9 +81,25 @@ export class Google implements IGoogleMEthods {
     };
   }
 
-  developer!: (
-    params: IGoogleDeveloperResponse[]
-  ) => IGoogleToCommonDeveloper[];
+  developer(params: IGoogleDeveloperResponse[]): IGoogleToCommonDeveloper[] {
+    return params.map((paramObj) => {
+      return {
+        // 타입
+        provider_type: providerType.google,
+        // google/apple 공통 속성
+        title: paramObj.title ?? null,
+        appId: paramObj.appId ?? null,
+        url: paramObj.url ?? null,
+        icon: paramObj.icon ?? null,
+        developer: paramObj.developer ?? null,
+        currency: paramObj.currency ?? null,
+        price: paramObj.price ?? null,
+        free: paramObj.free ?? null,
+        score: paramObj.score ?? null,
+        // apple / google 의미는 같지만 속성은 다른것..
+      };
+    });
+  }
   list!: (params: IGoogleListResponse[]) => IGoogleToCommonList[];
   reviews!: (params: IGoogleReviewsResponse[]) => IGoogleToCommonList[];
   search!: (params: IGoogleSearchResponse[]) => IGoogleToCommonSearch[];
