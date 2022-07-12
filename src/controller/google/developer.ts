@@ -1,5 +1,6 @@
 import google from "google-play-scraper";
 import { Request, Response, NextFunction } from "express";
+import { Google } from "../../model/google/index";
 
 export const developerController = async (
   req: Request,
@@ -11,7 +12,7 @@ export const developerController = async (
     console.log("params: ", params);
     const result = await google.developer(params);
     console.log("result: ", result);
-    res.status(200).json(result);
+    res.status(200).json(new Google().developer(result));
   } catch (error) {
     console.log("error: ", error);
     next(error);

@@ -175,7 +175,7 @@ export interface IGoogleAppResponse {
   developerEmail: string | null;
   developerWebsite: string | null;
   developerAddress: string | null;
-  privacyPolicy: string | null;
+  privacyPolicy?: string | null;
   developerInternalID: string | null;
   genre: string | null;
   genreId: string | null;
@@ -202,8 +202,8 @@ export interface IGoogleDeveloperResponse {
   url: string | null;
   icon: string | null;
   developer: string | null;
-  currency: string | null;
-  price: number | null;
+  currency?: string | null;
+  price?: number | null;
   free: boolean | null;
   summary: string | null;
   scoreText: string | null;
@@ -219,8 +219,8 @@ export interface IGoogleListResponse {
   url: string | null;
   icon: string | null;
   developer: string | null;
-  currency: string | null;
-  price: number | null;
+  currency?: string | null;
+  price?: number | null;
   free: boolean | null;
   summary: string | null;
   scoreText: string | null;
@@ -257,8 +257,8 @@ export interface IGoogleSearchResponse {
   icon: string;
   developer: string;
   developerId: string;
-  currency: string;
-  price: number;
+  currency?: string;
+  price?: number;
   free: boolean;
   summary: string;
   scoreText: string;
@@ -274,8 +274,8 @@ export interface IGoogleSimilarResponse {
   url: string;
   icon: string;
   developer: string;
-  currency: string;
-  price: number;
+  currency?: string;
+  price?: number;
   free: boolean;
   summary: string;
   scoreText: string;
