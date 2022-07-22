@@ -113,7 +113,7 @@ export interface IGoogleOnlyList {
 }
 export interface IGoogleOnlyReviews {
   thumbsUp: number | null;
-  criterias: { criteria: string | null; rating: number | null }[];
+  criterias: { criteria: string; rating: number }[];
   date: string | null;
   scoreText: string | null;
   replyDate: string | null;

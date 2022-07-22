@@ -187,7 +187,7 @@ export class Google implements IGoogleMEthods {
         // apple / google 의미는 같지만 속성은 다른것..
         // 구글만 가진 속성
         thumbsUp: paramObj.thumbsUp ?? null,
-        criterias: paramObj.criterias ?? [],
+        criterias: paramObj.criterias ?? [{ criteria: "", rating: 0 }],
         date: paramObj.date ?? null,
         scoreText: paramObj.scoreText ?? null,
         replyDate: paramObj.replyDate ?? null,

@@ -197,7 +197,7 @@ export class Apple implements IAppleMethods {
         userUrl: paramObj.userUrl ?? null,
         // 구글만 있는 속성 타입
         thumbsUp: null,
-        criterias: [],
+        criterias: [{ criteria: "", rating: 0 }],
         date: null,
         scoreText: null,
         replyDate: null,
