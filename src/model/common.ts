@@ -27,7 +27,7 @@ export interface ICommonAppResponse {
   developerWebsite: string | null;
   score: number | null;
   reviews: number | null;
-  screenshots: string[] | null;
+  screenshots: string[];
 }
 export interface ICommonDeveloperResponse {
   // 타입
@@ -102,8 +102,8 @@ export interface ICommonSimilarResponse {
  */
 export interface IConvertAppResponse {
   // apple / google 의미는 같지만 속성은 다른것..
-  genre: string | null; // apple:  "genres": [ "Entertainment", "Photo & Video"], google: "genre": "Social",
-  genreId: string | null; // apple: "genreIds": [ "6016", "6008" ], google: "genreId": "SOCIAL",
+  genre: string[]; // apple:  "genres": [ "Entertainment", "Photo & Video"], google: "genre": "Social",
+  genreId: string[]; // apple: "genreIds": [ "6016", "6008" ], google: "genreId": "SOCIAL",
   releaseNotes: string | null; // apple: 	"releaseNotes": "Elevate your videos with new transition effects.",  google: "recentChanges": "Try brand-new creative effects to make your videos stand out.",
 }
 export interface IConvertDeveloperResponse {

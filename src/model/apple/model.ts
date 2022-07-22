@@ -78,24 +78,24 @@ export interface IAppleOnlyApp {
   id: number | null;
   primaryGenre: string | null;
   primaryGenreId: number | null;
-  languages: string[] | null;
+  languages: string[];
   size: string | null;
   requiredOsVersion: string | null;
   developerUrl: string | null;
   currentVersionScore: number | null;
   currentVersionReviews: number | null;
-  ipadScreenshots: string[] | null;
-  appletvScreenshots: string[] | null;
-  supportedDevices: string[] | null;
+  ipadScreenshots: string[];
+  appletvScreenshots: string[];
+  supportedDevices: string[];
 }
 export interface IAppleOnlyDeveloper {
   id: number | null;
-  genres: string[] | null;
-  genreIds: string[] | null;
+  genres: string[];
+  genreIds: string[];
   primaryGenre: string | null;
   primaryGenreId: number | null;
   contentRating: string | null;
-  languages: string[] | null;
+  languages: string[];
   size: string | null;
   requiredOsVersion: string | null;
   released: string | null;
@@ -108,10 +108,10 @@ export interface IAppleOnlyDeveloper {
   reviews: number | null;
   currentVersionScore: number | null;
   currentVersionReviews: number | null;
-  screenshots: string[] | null;
-  ipadScreenshots: string[] | null;
-  appletvScreenshots: string[] | null;
-  supportedDevices: string[] | null;
+  screenshots: string[];
+  ipadScreenshots: string[];
+  appletvScreenshots: string[];
+  supportedDevices: string[];
 }
 export interface IAppleOnlyList {
   id: string | null;
@@ -126,12 +126,12 @@ export interface IAppleOnlyReviews {
 }
 export interface IAppleOnlySearch {
   id: number | null;
-  genres: string[] | null;
-  genreIds: string[] | null;
+  genres: string[];
+  genreIds: string[];
   primaryGenre: string | null;
   primaryGenreId: number | null;
   contentRating: string | null;
-  languages: string[] | null;
+  languages: string[];
   size: string | null;
   requiredOsVersion: string | null;
   released: string | null;
@@ -143,19 +143,19 @@ export interface IAppleOnlySearch {
   reviews: number | null;
   currentVersionScore: number | null;
   currentVersionReviews: number | null;
-  screenshots: string[] | null;
-  ipadScreenshots: string[] | null;
-  appletvScreenshots: string[] | null;
-  supportedDevices: string[] | null;
+  screenshots: string[];
+  ipadScreenshots: string[];
+  appletvScreenshots: string[];
+  supportedDevices: string[];
 }
 export interface IAppleOnlySimilar {
   id: number | null;
-  genres: string[] | null;
-  genreIds: string[] | null;
+  genres: string[];
+  genreIds: string[];
   primaryGenre: string | null;
   primaryGenreId: number | null;
   contentRating: string | null;
-  languages: string[] | null;
+  languages: string[];
   size: string | null;
   requiredOsVersion: string | null;
   released: string | null;
@@ -167,15 +167,16 @@ export interface IAppleOnlySimilar {
   reviews: number | null;
   currentVersionScore: number | null;
   currentVersionReviews: number | null;
-  screenshots: string[] | null;
-  ipadScreenshots: string[] | null;
-  appletvScreenshots: string[] | null;
-  supportedDevices: string[] | null;
+  screenshots: string[];
+  ipadScreenshots: string[];
+  appletvScreenshots: string[];
+  supportedDevices: string[];
 }
 
 /////////////////////////////////////////
 /**
  * RequestParams! 원래 라이브러리 Request Params
+ * (아래는 라이브러리가 변하기전까진 건들면 안됨)
  */
 /////////////////////////////////////////
 export interface IAppleAppRequest {

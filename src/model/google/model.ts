@@ -84,12 +84,12 @@ export interface IGoogleOnlyApp {
   scoreText: string | null;
   ratings: number | null;
   histogram: {
-    "1": number;
-    "2": number;
-    "3": number;
-    "4": number;
-    "5": number;
-  } | null;
+    No1: number;
+    No2: number;
+    No3: number;
+    No4: number;
+    No5: number;
+  };
   priceText: string | null;
   available: boolean | null;
   offersIAP: boolean | null;
@@ -102,7 +102,7 @@ export interface IGoogleOnlyApp {
   developerInternalID: string | null;
   headerImage: string | null;
   adSupported: boolean | null;
-  comments: string[] | null;
+  comments: string[];
 }
 export interface IGoogleOnlyDeveloper {
   scoreText: string | null;
@@ -113,7 +113,7 @@ export interface IGoogleOnlyList {
 }
 export interface IGoogleOnlyReviews {
   thumbsUp: number | null;
-  criterias: { criteria: string | null; rating: number | null }[] | null;
+  criterias: { criteria: string | null; rating: number | null }[];
   date: string | null;
   scoreText: string | null;
   replyDate: string | null;
@@ -130,6 +130,7 @@ export interface IGoogleOnlySimilar {
 /////////////////////////////////////////
 /**
  * RequestParams! 원래 라이브러리 Request Params
+ * (이건 건들면 안됨.. 라이브러리 변경시만 건듬)
  */
 /////////////////////////////////////////
 export interface IGoogleAppRequest {}
