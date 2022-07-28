@@ -40,8 +40,8 @@ export class Google implements IGoogleMEthods {
       reviews: params.reviews ?? null,
       screenshots: params.screenshots ?? [],
       // apple / google 의미는 같지만 속성은 다른것..
-      genre: params.genre ? [...params.genre] : [], // apple:  "genres": [ "Entertainment", "Photo & Video"], google: "genre": "Social",
-      genreId: params.genreId ? [...params.genreId] : [], // apple: "genreIds": [ "6016", "6008" ], google: "genreId": "SOCIAL",
+      genre: params.genre ? [params.genre] : [], // apple:  "genres": [ "Entertainment", "Photo & Video"], google: "genre": "Social",
+      genreId: params.genreId ? [params.genreId] : [], // apple: "genreIds": [ "6016", "6008" ], google: "genreId": "SOCIAL",
       releaseNotes: params.recentChanges ?? null, // apple: 	"releaseNotes": "Elevate your videos with new transition effects.",  google: "recentChanges": "Try brand-new creative effects to make your videos stand out.",
       // 구글만 가진 속성
       descriptionHTML: params.descriptionHTML ?? null,
