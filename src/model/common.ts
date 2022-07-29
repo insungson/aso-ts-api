@@ -55,6 +55,11 @@ export interface ICommonListResponse {
   currency: string | null;
   price: number | null;
   free: boolean | null;
+  developerUrl: string | null;
+  developerId: string | null;
+  genres: string[];
+  genreId: string[];
+  released: string | null;
 }
 export interface ICommonReviewsResponse {
   // 타입
@@ -102,7 +107,7 @@ export interface ICommonSimilarResponse {
  */
 export interface IConvertAppResponse {
   // apple / google 의미는 같지만 속성은 다른것..
-  genre: string[]; // apple:  "genres": [ "Entertainment", "Photo & Video"], google: "genre": "Social",
+  genres: string[]; // apple:  "genres": [ "Entertainment", "Photo & Video"], google: "genre": "Social",
   genreId: string[]; // apple: "genreIds": [ "6016", "6008" ], google: "genreId": "SOCIAL",
   releaseNotes: string | null; // apple: 	"releaseNotes": "Elevate your videos with new transition effects.",  google: "recentChanges": "Try brand-new creative effects to make your videos stand out.",
 }

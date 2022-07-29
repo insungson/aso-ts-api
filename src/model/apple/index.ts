@@ -58,7 +58,7 @@ export class Apple implements IAppleMethods {
       reviews: params.reviews ?? null,
       screenshots: params.screenshots ?? [],
       //속성은 다르지만 의미는 같은 것
-      genre: params.genres ? params.genres : [],
+      genres: params.genres ? params.genres : [],
       genreId: params.genreIds ? params.genreIds : [],
       releaseNotes: params.releaseNotes,
       id: params.id ?? null,
@@ -170,8 +170,8 @@ export class Apple implements IAppleMethods {
         id: paramObj.id ?? null,
         developerUrl: paramObj.developerUrl ?? null,
         developerId: paramObj.developerId ?? null,
-        genre: paramObj.genre ?? null,
-        genreId: paramObj.genreId ?? null,
+        genres: paramObj.genre ? [paramObj.genre] : [],
+        genreId: paramObj.genreId ? [paramObj.genreId] : [],
         released: paramObj.released ?? null,
         // 구글만 있는 속성 타입
         scoreText: null,

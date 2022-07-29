@@ -40,7 +40,7 @@ export class Google implements IGoogleMEthods {
       reviews: params.reviews ?? null,
       screenshots: params.screenshots ?? [],
       // apple / google 의미는 같지만 속성은 다른것..
-      genre: params.genre ? [params.genre] : [], // apple:  "genres": [ "Entertainment", "Photo & Video"], google: "genre": "Social",
+      genres: params.genre ? [params.genre] : [], // apple:  "genres": [ "Entertainment", "Photo & Video"], google: "genre": "Social",
       genreId: params.genreId ? [params.genreId] : [], // apple: "genreIds": [ "6016", "6008" ], google: "genreId": "SOCIAL",
       releaseNotes: params.recentChanges ?? null, // apple: 	"releaseNotes": "Elevate your videos with new transition effects.",  google: "recentChanges": "Try brand-new creative effects to make your videos stand out.",
       // 구글만 가진 속성
@@ -155,6 +155,11 @@ export class Google implements IGoogleMEthods {
         currency: paramObj.currency ?? null,
         price: paramObj.price ?? null,
         free: paramObj.free ?? null,
+        developerUrl: paramObj?.developerWebsite ?? null,
+        developerId: paramObj?.developerId ?? null,
+        genres: paramObj?.genre ? [paramObj?.genre] : [],
+        genreId: paramObj?.genreId ? [paramObj?.genreId] : [],
+        released: paramObj?.released ?? null,
         // apple / google 의미는 같지만 속성은 다른것..
         description: paramObj.summary ?? null,
         // 구글만 가진 속성
@@ -162,11 +167,6 @@ export class Google implements IGoogleMEthods {
         score: paramObj.score ?? null,
         // 애플만 가진 속성
         id: null,
-        developerUrl: null,
-        developerId: null,
-        genre: null,
-        genreId: null,
-        released: null,
       };
     });
   }

@@ -10,7 +10,7 @@ export const listController = async (
   try {
     const params = req.body;
     console.log("params: ", params);
-    const result = await google.list(params);
+    const result = await google.list({ fullDetail: true, ...params });
     console.log("result: ", result);
     res.status(200).json(new Google().list(result));
   } catch (error) {

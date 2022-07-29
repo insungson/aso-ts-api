@@ -115,11 +115,6 @@ export interface IAppleOnlyDeveloper {
 }
 export interface IAppleOnlyList {
   id: string | null;
-  developerUrl: string | null;
-  developerId: string | null;
-  genre: string | null;
-  genreId: string | null;
-  released: string | null;
 }
 export interface IAppleOnlyReviews {
   userUrl: string | null;

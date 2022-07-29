@@ -226,6 +226,11 @@ export interface IGoogleListResponse {
   summary: string | null;
   scoreText: string | null;
   score: number | null;
+  developerWebsite?: string | null;
+  developerId?: string | null;
+  genre?: string | null;
+  genreId?: string | null;
+  released?: string | null;
 }
 
 /**
