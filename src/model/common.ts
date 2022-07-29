@@ -42,6 +42,16 @@ export interface ICommonDeveloperResponse {
   price: number | null;
   free: boolean | null;
   score: number | null;
+  genres: string[];
+  genreIds: string[];
+  released: string | null;
+  updated: string | null;
+  releaseNotes: string | null;
+  version: string | null;
+  developerId: number | null;
+  developerWebsite: string | null;
+  reviews: number | null;
+  screenshots: string[];
 }
 export interface ICommonListResponse {
   // 타입

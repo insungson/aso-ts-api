@@ -209,6 +209,16 @@ export interface IGoogleDeveloperResponse {
   summary: string | null;
   scoreText: string | null;
   score: number | null;
+  genre?: string | null;
+  genreId?: string | null;
+  released?: string | null;
+  updated?: string | null;
+  recentChanges?: string | null;
+  version?: string | null;
+  developerId?: string | null;
+  developerWebsite?: string | null;
+  reviews?: number | null;
+  screenshots?: string[];
 }
 
 /**

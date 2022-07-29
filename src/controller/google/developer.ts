@@ -10,7 +10,7 @@ export const developerController = async (
   try {
     const params = req.body;
     console.log("params: ", params);
-    const result = await google.developer(params);
+    const result = await google.developer({ fullDetail: true, ...params });
     console.log("result: ", result);
     res.status(200).json(new Google().developer(result));
   } catch (error) {
