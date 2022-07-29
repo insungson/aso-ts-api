@@ -59,7 +59,12 @@ let corsOptions = {
 };
 
 if (prod) {
-  app.use(cors());
+  app.use(
+    cors({
+      origin: "*",
+      credentials: true,
+    })
+  );
   app.use(morgan("combined"));
   // app.use(hpp());
   app.use(helmet());
