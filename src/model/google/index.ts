@@ -120,7 +120,9 @@ export class Google implements IGoogleMEthods {
         reviews: paramObj?.reviews ?? null,
         screenshots: paramObj?.screenshots ?? [],
         // apple / google 의미는 같지만 속성은 다른것..
-        description: paramObj.summary ?? null,
+        description: paramObj?.description
+          ? paramObj?.description
+          : paramObj?.summary ?? null,
         // 구글만 가진 속성
         scoreText: paramObj.scoreText ?? null,
         // 애플만 가진 속성

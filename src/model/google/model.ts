@@ -219,6 +219,7 @@ export interface IGoogleDeveloperResponse {
   developerWebsite?: string | null;
   reviews?: number | null;
   screenshots?: string[];
+  description?: string | null;
 }
 
 /**
